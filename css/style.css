@@ -232,6 +232,13 @@ label {
     font-size:15px; color:#fff; font-weight:600;
     background-color:#0057FF; border-radius:9px;
 }
+.m-btn.type02 {
+    width:100%; height:48px;
+    position:relative;
+    font-size:15px; color:#fff; font-weight:600;
+    background-color:#0057FF; border-radius:9px;
+    box-shadow:0px 3px 12px rgba(0,0,0,0.16);
+}
 
 @media screen and (max-width:1200px){
 
@@ -331,4 +338,62 @@ table .m-input-number {margin:0 auto;}
 @media screen and (max-width:1200px){}
 @media screen and (max-width:768px){
 
+}
+
+.m-pop.type01 {
+    display: none; align-items: center; justify-content: center;
+    width:100%; height:100%; padding:20px;
+    position: fixed; top:0; left:0; z-index:10;
+}
+.m-pop.type01.active {
+    display: flex;
+    animation:popup .6s forwards;
+}
+
+@keyframes popup {
+    0% {
+        opacity:0;
+    }
+    100% {
+        opacity:1;
+    }
+}
+.m-pop.type01 .black {
+    width:100%; height:100%;
+    position: absolute; top:0; left:0;
+    background-color:rgba(0,0,0,0.6);
+}
+.m-pop.type01 .m-pop-inner {
+    display: flex; align-items: center; justify-content: center;
+    width:382px; max-width:100%; min-height:640px;
+    padding:100px 60px 60px 60px;
+    position:relative; z-index:1;
+    text-align: center;
+    background-color:#fff; border-radius:24px;
+    box-shadow:0px 3px 20px rgba(0,0,0,0.16);
+}
+.m-pop.type01 .m-pop-inner .box-title {
+    margin-bottom:28px;
+}
+.m-pop.type01 .m-pop-inner .box-title .title {
+    margin-top:4px;
+    font-size:25px; font-weight:bold;
+}
+.m-pop.type01 .m-pop-contents {margin-top:-168px;}
+.m-pop.type01 .body {
+    line-height:24px;
+}
+.m-pop.type01 .m-pop-btns {
+    width:100%;
+    padding:60px;
+    position:absolute; left:0; bottom:0;
+}
+
+.m-spaces.type01 {
+    display: flex;
+    margin:-5px;
+}
+.m-spaces.type01 .m-space-wrap {
+    flex:1;
+    padding:5px;
 }
