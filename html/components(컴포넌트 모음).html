@@ -1,0 +1,191 @@
+<!doctype html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport"
+	      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>컴포넌트</title>
+	<link rel="stylesheet" href="../css/aos-2.3.1.css">
+	<link rel="stylesheet" href="../css/animate.css">
+	<link rel="stylesheet" href="../css/swiper.min.css">
+	<link rel="stylesheet" href="../css/default.css">
+	<link rel="stylesheet" href="../css/style.css">
+
+	<script src="../js/jquery-1.12.4.js"></script>
+	<script src="../js/swiper.min.js"></script>
+	<script src="../js/aos-2.3.1.js"></script>
+	<script src="../js/common.js"></script>
+	<style>
+		body {padding-bottom:150px;}
+		body > .components > section {margin:20px; padding:20px; border-bottom:1px solid #e1e1e1;}
+		body > .components > section > h3 {margin-bottom:20px; padding:10px 20px; font-size:24px; font-weight:600; color:#fff; background-color:green;}
+		.component {max-width:1560px; margin:0 auto;}
+
+		#componentSearch {width:100%; position:fixed; bottom:0; left:0;}
+		#componentSearch input {width:100%; padding:20px 10px; background-color:black; color:#fff !Important;}
+
+	</style>
+</head>
+<body>
+
+<div class="components">
+
+	<section data-class="박스 m-box type01">
+		<h3>.m-box.type01</h3>
+
+		<div class="component">
+			<div class="m-box type01">
+				<div class="top">
+					<h3 class="title">디 올-뉴 그랜저(GN7)</h3>
+					<p class="body">4,233 만원</p>
+				</div>
+
+				<div class="bottom">
+					<p class="body">2023년형 가솔린 2.5 2WD 익스클루시브 (자동)</p>
+				</div>
+
+				<div class="img-wrap">
+					<img src="../img/realCar1.png" alt="">
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section data-class="박스 m-boxes type01">
+		<h3>.m-boxes.type01</h3>
+
+		<div class="component">
+			<div class="m-boxes type01">
+				<div class="m-box">
+					<h3 class="title">현금</h3>
+					<p class="body">800만원</p>
+				</div>
+
+				<div class="m-box">
+					<h3 class="title">현금</h3>
+					<p class="body">800만원</p>
+				</div>
+			</div>
+
+			<div class="mt-20"></div>
+
+			<div class="m-boxes type01">
+				<div class="m-box">
+					<h3 class="title align-left">현금 800만원, 할부 700만원</h3>
+					<h3 class="title align-left">리스 800만원, 렌트 7000만원 할인 입니다</h3>
+				</div>
+			</div>
+
+		</div>
+	</section>
+
+	<section data-class="상단 m-top type01">
+		<h3>.m-top.type01</h3>
+
+		<div class="component">
+			<div class="m-top type01">
+				<div class="box-comment">
+					<div class="left">
+						<img src="../img/logo-big.png" alt="" class="img">
+						<h3 class="title">신차 구매 여정을 떠나볼가요?</h3>
+					</div>
+					<div class="right">
+						<img src="../img/deco-top1.png" alt="">
+					</div>
+				</div>
+
+				<div class="mt-10"></div>
+
+				<div class="btns">
+					<button class="m-btn type02">회원가입 / 로그인</button>
+				</div>
+			</div>
+
+			<div class="mt-40"></div>
+
+			<div class="m-top type01">
+				<div class="box-comment">
+					<div class="left">
+						<div class="box-name">
+							<span class="name">홍길동</span>님
+						</div>
+						<h3 class="title">신차 구매 여정을 떠나볼가요?</h3>
+					</div>
+					<div class="right">
+						<button class="m-btn-go type01">
+							<i class="xi-log-out"></i>
+						</button>
+					</div>
+				</div>
+
+				<div class="mt-30"></div>
+
+				<div class="btns">
+					<button class="m-btn type02">내 정보 바로가기</button>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section data-class="체크박스 m-input-checkboxes type03">
+		<h3>.m-input-checkboxes.type01</h3>
+
+		<div class="component">
+			<div class="m-input-checkboxes type03">
+				<div class="m-input-checkbox-wrap">
+					<div class="m-input-checkbox">
+						<input type="radio" checked>
+						<label for="">할부</label>
+					</div>
+				</div>
+				<div class="m-input-checkbox-wrap">
+					<div class="m-input-checkbox">
+						<input type="radio">
+						<label for="">리스</label>
+					</div>
+				</div>
+				<div class="m-input-checkbox-wrap">
+					<div class="m-input-checkbox">
+						<input type="radio">
+						<label for="">렌트</label>
+					</div>
+				</div>
+				<div class="m-input-checkbox-wrap">
+					<div class="m-input-checkbox">
+						<input type="radio">
+						<label for="">현금</label>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+
+</div>
+
+<div id="componentSearch">
+	<input type="text" placeholder="클래스명을 입력하세요." onkeyup="filter(event)">
+</div>
+<script>
+	let componentsEl = $("body > .components > section");
+
+	let filteredEl = [];
+
+	/* 컴포넌트들과 무관한 함수 */
+	function filter(event){
+		filteredEl = [];
+
+		componentsEl.each(function(index, item){
+			if($(item).attr("data-class").includes(event.target.value))
+				filteredEl.push(item);
+		});
+
+		$("body > .components").empty();
+
+		$("body > .components").append(filteredEl);
+	}
+
+</script>
+</body>
+</html>
