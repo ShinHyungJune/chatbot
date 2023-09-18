@@ -60,17 +60,21 @@
     border-radius:15px 15px 0 0 ;
     box-shadow:0px -4px 12px rgba(0,0,0,0.16); background-color:#fff;
 }
-
 .m-bottom.type01 .m-input-text.type01 input {
     background-color:#fff;
     border:1px solid #e1e1e1;
 }
 
-@media screen and (max-width:1200px) {
+.m-btn-bottom.type01 {
+    display: flex; align-items: center; justify-content: center;
+    position: fixed; bottom:120px; right:30px;
+    width:46px; height:46px;
+    background-color:#0057FF;
+    border-radius:100%;
+    box-shadow:0px 3px 12px rgba(0,87,255,0.16);
 }
-
-@media screen and (max-width:768px) {
-
+.m-btn-bottom.type01 i {
+    color:#fff;
 }
 
 .main {
@@ -88,6 +92,9 @@
 }
 .m-messages.type01 .m-message > .body > i {
     position: relative; top:2px; right:-4px; color:#0057FF;
+}
+.m-messages.type01 .m-message > .body > .point {
+    font-size:14px; font-weight:bold;
 }
 @keyframes fadeInUp {
     0% {
@@ -117,6 +124,10 @@
     text-align: right;
     word-break: keep-all;
 }
+.bold {font-weight:bold !important;}
+.m-message > .body > span {
+    font-size:14px;
+}
 
 .m-message.type-left {
     display: flex; justify-content: flex-start;
@@ -129,6 +140,7 @@
     justify-content: flex-start;
 }
 .m-message.type-admin .body {
+    padding-right:15px;
     background-color:#ECF2FF; border-radius:0 24px 24px 24px;
     text-align: left;
 }
@@ -164,11 +176,11 @@
     margin-bottom:10px;
 }
 .m-message.type-info .infos .info .title {
-    font-size:14px;
+    font-size:14px; color:#999
 }
 .m-message.type-info .infos .info .content {
     max-width:200px;
-    font-size:15px; font-weight:bold; word-break: keep-all; text-align: right; line-height:20px;
+    font-size:15px; font-weight:500; word-break: keep-all; text-align: right; line-height:20px;
 }
 .m-message.type-info .infos .info:last-child {
     margin-bottom:0;
@@ -264,7 +276,7 @@
 }
 .m-message.type-price2 .infos .info .content {
     max-width:200px; flex:auto;
-    font-size:14px; font-weight:bold; word-break: keep-all; text-align: left; word-break: keep-all;
+    font-size:14px; font-weight:500; word-break: keep-all; text-align: left; word-break: keep-all;
 }
 .m-message.type-price2 .infos .info:last-child {
     margin-bottom:0;
@@ -403,6 +415,47 @@ input[type='radio'] {display: none;}
 .m-input-checkboxes.type03 input:checked + label {
     background-color:#0057FF; color:#fff;
 }
+
+.m-input-checkboxes.type04 .m-input-checkbox-wrap {
+    margin-bottom:10px;
+}
+.m-input-checkboxes.type04 .m-input-checkbox-wrap:last-of-type {
+    margin-bottom:0;
+}
+.m-input-checkboxes.type04 .m-input-checkbox label {
+    display: block;
+    padding:24px 30px;
+    position:relative;
+    border-radius:24px; border:2px solid #E4E4E4; box-shadow:0px 3px 8px rgba(0,0,0,0.16);
+    transition:all .3s;
+}
+.m-input-checkboxes.type04 .m-input-checkbox label i {
+    position: absolute; top:10px; right:15px;
+    font-size:25px; color:#0057FF;
+    opacity:0;
+    transition: all .3s;
+}
+.m-input-checkboxes.type04 .m-input-checkbox label .title {
+    font-size:15px; font-weight:bold;
+    transition:all .3s;
+}
+.m-input-checkboxes.type04 .m-input-checkbox label .body {
+    margin-top:5px;
+    font-size:14px; font-weight:300;
+    transition:all .3s;
+}
+.m-input-checkboxes.type04 .m-input-checkbox input:checked + label {
+    border-color:#0057FF;
+}
+.m-input-checkboxes.type04 .m-input-checkbox input:checked + label .title {
+    color:#0057FF;
+}
+.m-input-checkboxes.type04 .m-input-checkbox input:checked + label .body {
+    color:#0057FF;
+}
+.m-input-checkboxes.type04 .m-input-checkbox input:checked + label i {
+    opacity:1;
+}
 .m-input-checkbox.type01 {}
 .m-input-checkbox.type01 label {
     display:block;
@@ -539,7 +592,7 @@ table .m-input-number {margin:0 auto;}
 }
 .m-pop.type01 .m-pop-inner {
     display: flex; align-items: center; justify-content: center;
-    width:382px; max-width:100%; min-height:640px;
+    width:382px; max-width:100%; min-height:460px;
     padding:100px 60px 60px 60px;
     position:relative; z-index:1;
     text-align: center;
@@ -585,7 +638,10 @@ table .m-input-number {margin:0 auto;}
 }
 .area-main .section1 .title {
     margin-bottom:12px;
-    font-size:33px; font-weight:bold; line-height:40px; text-align: center;
+    font-size:28px; font-weight:bold; line-height:40px; text-align: center;
+}
+.area-main .section1 .title .point {
+    font-size:28px; font-weight:bold; line-height:40px; color:#0057FF;
 }
 .area-main .section1 .body {
     margin-bottom:70px;
@@ -654,7 +710,7 @@ table .m-input-number {margin:0 auto;}
 }
 .m-box.type01 .bottom {
     padding-top:10px;
-    position:relative;
+    position:relative; z-index:1;
 }
 .m-box.type01 .bottom:before {
     content:"";
@@ -663,7 +719,7 @@ table .m-input-number {margin:0 auto;}
     background-color:#fff;
 }
 .m-box.type01 .bottom .body {
-    font-size:10px; color:#fff;
+    font-size:10px; color:#fff;  word-break: keep-all;
 }
 .m-box.type01.type-big {
     padding:25px 20px 20px 20px;
@@ -688,11 +744,11 @@ table .m-input-number {margin:0 auto;}
 
 .m-boxes.type01 {
     display: flex; align-items: center;
-    border:1px solid #E4E4E4; border-radius:15px;
+    border:1px solid #e1e1e1; border-radius:15px;
 }
 .m-boxes.type01 .m-box {
     flex:1;
-    padding:15px 10px;
+    padding:15px 4px;
     position:relative;
 }
 .m-boxes.type01 .m-box:before {
@@ -720,6 +776,9 @@ table .m-input-number {margin:0 auto;}
 .footer {
     padding:50px 0;
     text-align: center;
+}
+.footer .wrap {
+    padding:0 16px;
 }
 .footer .links {
     display: flex; align-items: center; justify-content: center;

@@ -20,4 +20,10 @@ $(document).ready(function(){
     $(".m-profile.type01 .black").click(function(){
         $(".m-profile.type01").removeClass("active");
     });
+
+
+    // 아래로 스크롤 내리기
+    $(".m-btn-bottom.type01").click(function(){
+        $('html, body').animate({ scrollTop: $(document).height() });
+    });
 });
