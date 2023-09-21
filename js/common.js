@@ -155,4 +155,10 @@ $(document).ready(function(){
     $(".m-btn-bottom.type01").click(function(){
         $('html, body').animate({ scrollTop: $(document).height() });
     });
+
+    // 팝업창 제어
+    $(".m-script-pop").click(function(){
+        let target = $(this).attr("data-target");
+        $(target).toggleClass("active");
+    })
 });

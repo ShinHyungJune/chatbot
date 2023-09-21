@@ -43,6 +43,52 @@
     <div class="main">
         <div class="area-calc-result">
             <div class="wrap">
+                <!-- 노후차 팝업 -->
+                <div class="m-pop type02" id="pop1">
+                    <div class="black"></div>
+
+                    <div class="m-pop-inner">
+                        <div class="m-pop-title">노후차</div>
+
+                        <div class="m-pop-contents">
+                            <div class="m-policy type01">내용기입내용기입내용기입 내용기입내용기입내용기입 내용기입내용기입내용기입 내용기입내용기입내용기입내용기입내용기입내용기입 내용기입내용기입내용기입 내용기입내용기입내용기입 내용기입내용기입내용기입
+                                내용기입내용기입내용기입내용기입내용기입내용기입내용기입내용기입내용기입내용기입내용기입내용기입내용기입내용기입내용기입내용기입내용기입내용기입</div>
+                        </div>
+                        <div class="m-pop-btns">
+                            <div class="m-spaces type01">
+                                <div class="m-space-wrap">
+                                    <div class="m-space">
+                                        <button class="m-btn type02 bg-lightGray m-script-pop" type="button" data-target="#pop1">닫기</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 생산월 조건 팝업 -->
+                <div class="m-pop type02" id="pop2">
+                    <div class="black"></div>
+
+                    <div class="m-pop-inner">
+                        <div class="m-pop-title">생산월 조건</div>
+
+                        <div class="m-pop-contents">
+                            <div class="m-policy type01">내용기입내용기입내용기입 내용기입내용기입내용기입 내용기입내용기입내용기입 내용기입내용기입내용기입내용기입내용기입내용기입 내용기입내용기입내용기입 내용기입내용기입내용기입 내용기입내용기입내용기입
+                                내용기입내용기입내용기입내용기입내용기입내용기입내용기입내용기입내용기입내용기입내용기입내용기입내용기입내용기입내용기입내용기입내용기입내용기입</div>
+                        </div>
+                        <div class="m-pop-btns">
+                            <div class="m-spaces type01">
+                                <div class="m-space-wrap">
+                                    <div class="m-space">
+                                        <button class="m-btn type02 bg-lightGray m-script-pop" type="button" data-target="#pop2">닫기</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
                 <div class="m-messages type01">
                     <div class="m-message type-admin">
                         <div class="img-wrap" style="background-image:url('../img/thumbnail.png')"></div>
@@ -80,7 +126,7 @@
                     <div class="m-message type-price">
                         <div class="box-fragment">
                             <div class="box-title">
-                                <h3 class="title">[노후차] <i class="xi-info"></i></h3>
+                                <h3 class="title m-script-pop" data-target="#pop1">[노후차] <i class="xi-info"></i></h3>
                             </div>
 
                             <div class="infos">
@@ -101,7 +147,7 @@
 
                         <div class="box-fragment">
                             <div class="box-title">
-                                <h3 class="title">[생산월 조건] <i class="xi-info"></i></h3>
+                                <h3 class="title m-script-pop" data-target="#pop2">[생산월 조건] <i class="xi-info"></i></h3>
                             </div>
 
                             <div class="infos">
