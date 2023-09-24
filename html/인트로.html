@@ -2,7 +2,7 @@
 <html lang="ko">
 <head>
     <meta charset="utf-8">
-    <title>로그인</title>
+    <title>인트로</title>
     <meta name="viewport"
           content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no"/>
     <meta name="format-detection" content="telephone=no, email=no, address=no">
@@ -19,6 +19,7 @@
     <script src="../js/swiper.min.js"></script>
     <script src="../js/aos-2.3.1.js"></script>
     <script src="../js/common.js"></script>
+    <script src="../js/intro.js"></script>
 </head>
 <style>
 
@@ -26,29 +27,24 @@
 <body>
 
 <div id="app">
-    <div class="main">
-       <div class="area-login">
-           <div class="fragment">
-               <div class="content">
-                   <img src="../img/logo-big.png" alt="" class="logo">
-                   <h3 class="title">신차 구매의 AI 전환</h3>
+    <div class="area-intro">
+        <div class="consoles">
+            <div class='console-container' id="console-container1">
+                <span id='text'></span>
+                <div class='console-underscore' id='console'>&#95;</div>
+            </div>
 
+            <div class='console-container' id="console-container2">
+                <span id='text'></span>
+                <div class='console-underscore' id='console'>&#95;</div>
+            </div>
+        </div>
 
-                   <div class="btns">
-                       <a href="#" class="m-social type01 type-kakao">
-                           <img src="../img/kakao.png" alt="">
-                           <h3 class="title">카카오 로그인</h3>
-                       </a>
-                       <div class="mt-16"></div>
-                       <a href="#" class="m-social type01 type-naver">
-                           <img src="../img/naver.png" alt="">
-                           <h3 class="title">네이버 로그인</h3>
-                       </a>
-                   </div>
-               </div>
-
-           </div>
-       </div>
+        <div class='box'>
+            <div class='wave -one'></div>
+            <div class='wave -two'></div>
+            <div class='wave -three'></div>
+        </div>
     </div>
 </div>
 <script>

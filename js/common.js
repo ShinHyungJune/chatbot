@@ -37,44 +37,22 @@ $(document).ready(function(){
     $(".m-message.animation-loading").each(function (index, item){
         const target = $(item).children(".body");
         const message = target.text().split('\n').map(line => line.trim()).join('\n');
-        const loading = ".....";
+        const loading = "<div class='dots'><span class='dot'></span><span class='dot'></span><span class='dot'></span><span class='dot'></span><span class='dot'></span></div>";
         const length = loading.length;
         let time = 6000000;
 
-        target.text(".");
+        target.html(loading);
 
         if($(this).hasClass("animation-limit-time"))
-            time = 2500;
+            setTimeout(function(){
+                target.html(message);
 
-        function animateDots(index) {
-            if (index < length) {
-                const dot = $('<span>').text(loading[index]);
-                dot.addClass('fade-dot');
-                target.append(dot);
-                setTimeout(function() {
-                    animateDots(index + 1);
-                    time -= 500;
-                }, 500); // 500ms 마다 점을 추가하고 투명하게 만듭니다.
-            }else{
-                if(time > 0){
-                    index = 0;
-
-                    target.text(".");
-
-                    animateDots(index + 1);
-                }else{
-                    console.log(target.text());
-                    typeMessage(loading.length - 1, loading + " " + message, target);
-                }
-            }
-        }
-
-        // 애니메이션 시작
-        animateDots(0);
+                typeMessage(0, message, target);
+            }, 2500);
     });
 
     function typeAfterCountMessage(index, message, target) {
-        let count = 10;
+        let count = 15;
 
         if (index <= message.length + 1) {
             target.text(message.slice(0, index));
@@ -159,6 +137,7 @@ $(document).ready(function(){
     // 팝업창 제어
     $(".m-script-pop").click(function(){
         let target = $(this).attr("data-target");
+        $("html, body").toggleClass("no-scroll");
         $(target).toggleClass("active");
     })
 });

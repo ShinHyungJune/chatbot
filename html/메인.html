@@ -125,7 +125,7 @@
                             <div class="swiper-slide">
                                 <div class="content">
                                     <div class="box-title">
-                                        <p class="body">현 시점에서 최대 할인 조건의</p>
+                                        <p class="body">현 시점에서 <span class="point">최대 할인</span> 조건의</p>
                                         <h3 class="title">구매 정보를 알려줘요</h3>
                                     </div>
 
@@ -164,22 +164,22 @@
                                         <div class="m-boxes type01">
                                             <div class="m-box">
                                                 <h3 class="title">현금</h3>
-                                                <p class="body">800만원</p>
+                                                <p class="body primary">800만원</p>
                                             </div>
 
                                             <div class="m-box">
                                                 <h3 class="title">할부</h3>
-                                                <p class="body">750만원</p>
+                                                <p class="body primary">750만원</p>
                                             </div>
 
                                             <div class="m-box">
                                                 <h3 class="title">리스</h3>
-                                                <p class="body">820만원</p>
+                                                <p class="body primary">820만원</p>
                                             </div>
 
                                             <div class="m-box">
                                                 <h3 class="title">렌트</h3>
-                                                <p class="body">890만원</p>
+                                                <p class="body primary">890만원</p>
                                             </div>
                                         </div>
                                     </div>
@@ -202,45 +202,40 @@
                                         </div>
 
                                         <div class="swiper2">
-                                            <div class="swiper-container">
-                                                <div class="swiper-wrapper">
-                                                    <div class="swiper-slide">
-                                                        <div class="m-box type01">
-                                                            <div class="top">
-                                                                <h3 class="title">E클래스</h3>
-                                                                <p class="body">30대</p>
-                                                            </div>
+                                            <div class="m-box type01">
+                                                <div class="top">
+                                                    <h3 class="title">E클래스</h3>
+                                                    <p class="body">30대</p>
+                                                </div>
 
-                                                            <div class="img-wrap">
-                                                                <img src="../img/E클래스.png" alt="">
-                                                            </div>
-                                                        </div>
+                                                <div class="img-wrap">
+                                                    <img src="../img/E클래스.png" alt="">
+                                                </div>
+                                            </div>
 
-                                                        <div class="mt-10"></div>
+                                            <div class="mt-10"></div>
 
-                                                        <div class="m-box type01">
-                                                            <div class="top">
-                                                                <h3 class="title">GV80</h3>
-                                                                <p class="body">52대</p>
-                                                            </div>
+                                            <div class="m-box type01">
+                                                <div class="top">
+                                                    <h3 class="title">GV80</h3>
+                                                    <p class="body">52대</p>
+                                                </div>
 
-                                                            <div class="img-wrap">
-                                                                <img src="../img/GV80.png" alt="">
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="swiper-slide">
-                                                        <div class="m-box type01">
-                                                            <div class="top">
-                                                                <h3 class="title">쏘렌토 HEV</h3>
-                                                                <p class="body">67대</p>
-                                                            </div>
+                                                <div class="img-wrap">
+                                                    <img src="../img/GV80.png" alt="">
+                                                </div>
+                                            </div>
 
-                                                            <div class="img-wrap">
-                                                                <img src="../img/쏘렌토.png" alt="">
-                                                            </div>
-                                                        </div>
-                                                    </div>
+                                            <div class="mt-10"></div>
+
+                                            <div class="m-box type01">
+                                                <div class="top">
+                                                    <h3 class="title">쏘렌토 HEV</h3>
+                                                    <p class="body">67대</p>
+                                                </div>
+
+                                                <div class="img-wrap">
+                                                    <img src="../img/쏘렌토.png" alt="">
                                                 </div>
                                             </div>
                                         </div>
@@ -252,7 +247,7 @@
                 </div>
             </section>
 
-            <footer class="footer">
+            <footer class="footer active">
                 <div class="wrap">
                     <div class="links">
                         <a href="#" class="link">이용약관</a>
@@ -295,7 +290,7 @@
     </div>
 </div>
 <script>
-    var swiper = new Swiper(".swiper-container", {
+    new Swiper(".swiper1 .swiper-container", {
         /*
         pagination: {
             el: ".pagination",
@@ -307,7 +302,23 @@
         spaceBetween: 20,
         slidesPerView: 1.2,
         autoplay: {
-            delay: 3000, // 자동 슬라이드 간격 (ms)
+            delay: 7000, // 자동 슬라이드 간격 (ms)
+        },
+    });
+
+    new Swiper(".swiper2 .swiper-container", {
+        /*
+        pagination: {
+            el: ".pagination",
+            clickable: true,
+        },
+        loop: true, // 무한 루프
+        speed: 1000, // 넘어가는 속도 (ms)
+        */
+        spaceBetween: 0,
+        slidesPerView: 1.2,
+        autoplay: {
+            delay: 10000, // 자동 슬라이드 간격 (ms)
         },
     });
 
