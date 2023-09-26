@@ -326,13 +326,17 @@
     let section = $(".section1");
     let rect = section[0].getBoundingClientRect();
 
-    window.addEventListener('scroll', () => {
-        // 스크롤 위치를 확인하여 버튼을 표시 또는 숨깁니다.
-        if (window.scrollY > rect.top + rect.height) {
+    $("html, body").scroll(function(){
+        if ($(this).scrollTop() > rect.top + rect.height - 100) {
             btn.addClass("float");
         } else {
             btn.removeClass("float");
         }
+    });
+
+    window.addEventListener('scroll', () => {
+        // 스크롤 위치를 확인하여 버튼을 표시 또는 숨깁니다.
+
     });
 
     $(".footer .btn-toggle").click(function(){

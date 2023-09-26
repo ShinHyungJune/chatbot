@@ -762,6 +762,7 @@ table .m-input-number {margin:0 auto;}
 
 .area-main {
     padding-bottom:60px;
+    background-color:#fff;
 }
 .area-main .section1 {
     padding:60px 40px;
@@ -956,6 +957,7 @@ table .m-input-number {margin:0 auto;}
 .footer {
     padding:40px 0;
     text-align: left;
+    background-color:#fff;
 }
 .footer .wrap {
     padding:0 16px;
