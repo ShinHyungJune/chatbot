@@ -139,5 +139,24 @@ $(document).ready(function(){
         let target = $(this).attr("data-target");
         $("html, body").toggleClass("no-scroll");
         $(target).toggleClass("active");
-    })
+    });
+
+    // 스크롤 끝에 도달 시 아래로 내리기 제거
+    setTimeout(function(){
+        catchEnd();
+    }, 1000);
+
+    $("html, body").scroll(function(){
+        catchEnd();
+    });
+
+    function catchEnd(){
+        var scrT = document.body.scrollTop;
+
+        if(scrT == $(document).height() - $(window).height()){
+            $(".m-btn-bottom-wrap").addClass("hide");
+        } else {
+            $(".m-btn-bottom-wrap").removeClass("hide");
+        }
+    }
 });

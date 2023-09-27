@@ -71,7 +71,7 @@ html {
 .m-bottom.type01 {
     max-width:450px; width:100%;
     padding:15px;
-    position: fixed; bottom:0; left:50%; z-index:1; transform:translateX(-50%);
+    position: fixed; bottom:0; left:calc(50% - 10px); z-index:1; transform:translateX(-50%);
     border-radius:15px 15px 0 0 ;
     box-shadow:0px -4px 12px rgba(0,0,0,0.16); background-color:#fff;
 }
@@ -84,6 +84,11 @@ html {
     display: flex; align-items: center; justify-content: flex-end;
     max-width:450px; width:100%;
     position: fixed; bottom:120px; left:50%; transform:translateX(-50%);
+    z-index:10;
+    transition: bottom .3s;
+}
+.m-btn-bottom-wrap.hide {
+    bottom:-120px;
 }
 .m-btn-bottom.type01 {
     display: flex; align-items: center; justify-content: center;
@@ -94,6 +99,10 @@ html {
 }
 .m-btn-bottom.type01 i {
     color:#fff;
+}
+
+@media screen and (max-width:450px) {
+    .m-bottom.type01 {left:50%;}
 }
 
 .main {
