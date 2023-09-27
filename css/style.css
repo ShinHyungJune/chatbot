@@ -764,6 +764,14 @@ table .m-input-number {margin:0 auto;}
     padding-bottom:60px;
     background-color:#fff;
 }
+.area-main .swiper2 {
+
+}
+.area-main .swiper2 .deco {
+    width: 390px;
+    position: absolute; bottom:-80px; left:50%; transform:translateX(-50%);
+    z-index: 1;
+}
 .area-main .section1 {
     padding:60px 40px;
 }
@@ -844,7 +852,7 @@ table .m-input-number {margin:0 auto;}
 }
 
 .area-main .section2 .swiper-slide:nth-child(3) {
-
+    position: relative; overflow:hidden;
 }
 .area-main .section2 .swiper-slide:nth-child(3) .box-title {
 }
@@ -1042,8 +1050,26 @@ table .m-input-number {margin:0 auto;}
     transition: top .3s;
 
 }
-.m-filter.type01.active {
-    top:10px;
+.m-filter.type01.top {
+    display: none; opacity: 0;
+    width: calc(100% - 40px);
+    position: fixed; top:20px; left:50%; transform:translateX(-50%);
+    z-index: 10;
+}
+.m-filter.type01.top.active {
+    display: block;
+    animation: fadeFilter .6s forwards;
+}
+
+@keyframes fadeFilter {
+    0% {
+        top:0;
+        opacity:0;
+    }
+    100% {
+        top:20px;
+       opacity: 1;
+    }
 }
 .m-filter.type01 > .m-filter-inner {
     border:1px solid #E4E4E4; border-radius:24px;
@@ -1054,12 +1080,21 @@ table .m-input-number {margin:0 auto;}
     padding:6px 10px; padding-left:30px;
     border:1px solid #E4E4E4; border-radius:24px;
 }
+
 .m-filter.type01 > .m-filter-inner > .box-title .title {
     font-size:15px; font-weight:bold;
 }
-.m-filter.type01 > .m-filter-inner > .box-title i {
-    font-size:30px; color:#0057FF;
-    transition:all .3s;
+.m-filter.type01 > .m-filter-inner > .box-title .btn {
+    display: flex; align-items: center; justify-content: center;
+    width:26px; height:26px;
+    border-radius:100%; background-color:#0057FF;
+}
+.m-filter.type01 > .m-filter-inner > .box-title .btn i {
+    position:relative; top:1px;
+    font-size:16px; color:#fff;
+}
+.m-filter.type01 > .m-filter-inner > .box-title.active .btn i {
+    transform:rotate(180deg); top:0;
 }
 .m-filter.type01 > .m-filter-inner > .box-content {
     display: none;
@@ -1076,8 +1111,12 @@ table .m-input-number {margin:0 auto;}
     padding:11px 25px;
     border:1px solid #E4E4E4; border-radius:15px;
 }
+
 .m-filter.type01 > .m-filter-inner > .box-content > .m-filter-inner > .box-title.active {
     border-radius:15px 15px 0 0 ;
+}
+.m-filter.type01 > .m-filter-inner > .box-content > .m-filter-inner > .box-title.active i {
+    transform:rotate(180deg);
 }
 .m-filter.type01 > .m-filter-inner > .box-content > .m-filter-inner > .box-title .title {
     font-size:15px; font-weight:500; color:#777;
