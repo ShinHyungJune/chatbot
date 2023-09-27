@@ -148,7 +148,7 @@ html {
     width:25px; height:25px;
     margin-right:10px;
     border-radius:100%;
-    background-size:cover; background-position:center center;
+    background-size:cover; background-repeat:no-repeat; background-position:center center; background-position-y:0px; background-color:#fff; border:1px solid #e1e1e1;
 }
 .m-message > .body {
     max-width:calc(100% - 35px);
@@ -1239,6 +1239,7 @@ table .m-input-number {margin:0 auto;}
     width: 120px; height:120px;
     margin:0 auto; margin-bottom:20px;
     background-size:cover; background-position: center center; background-repeat: no-repeat;
+    background-position-y:10px; border:1px solid #e1e1e1; background-color:#fff;
     border-radius:100%;
 }
 .m-profile.type01 .m-profile-inner .title {
