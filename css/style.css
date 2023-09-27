@@ -767,6 +767,9 @@ table .m-input-number {margin:0 auto;}
 .area-main .swiper2 {
 
 }
+.area-main .swiper2 .m-box.type01 {
+    height:85px;
+}
 .area-main .swiper2 .deco {
     width: 390px;
     position: absolute; bottom:-80px; left:50%; transform:translateX(-50%);
@@ -822,7 +825,7 @@ table .m-input-number {margin:0 auto;}
     padding-right:20px;
 }
 .area-main .section2 .swiper1 .swiper-slide {
-    min-height:557px;
+    min-height:500px;
     padding:40px 20px;
     background-color:#fff; border-radius:25px;
     box-shadow:0px 3px 12px rgba(6,60,163, 0.12);
@@ -857,7 +860,7 @@ table .m-input-number {margin:0 auto;}
 .area-main .section2 .swiper-slide:nth-child(3) .box-title {
 }
 .area-main .section2 .swiper-slide:nth-child(3) .img-wrap {
-    max-width:140px;
+    max-width:110px;
     right:0;
 }
 .area-main .section2 .scroll-boxes {
