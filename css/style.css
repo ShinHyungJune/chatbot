@@ -48,7 +48,7 @@ html {
     box-shadow: 0px 3px 6px rgba(0,0,0,0.16);
 }
 .header .logo {
-    width: 60px;
+    width: 70px;
 }
 .header .wrap {
     display: flex; align-items: center; justify-content: space-between;
@@ -1052,7 +1052,7 @@ table .m-input-number {margin:0 auto;}
     position: relative; top:42px;
 }
 .m-top.type01 .box-comment .left .img {
-    display: block;
+    display: block; width: 100px;
     margin-bottom:15px;
 }
 .m-top.type01 .box-comment .left .title {
