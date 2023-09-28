@@ -48,7 +48,7 @@ html {
     box-shadow: 0px 3px 6px rgba(0,0,0,0.16);
 }
 .header .logo {
-    width: 70px;
+    width: 60px;
 }
 .header .wrap {
     display: flex; align-items: center; justify-content: space-between;
@@ -1020,7 +1020,7 @@ table .m-input-number {margin:0 auto;}
 }
 
 .m-top.type01 {
-    padding:50px 24px 24px 24px;
+    padding:20px 24px 24px 24px;
     position: relative;
     box-shadow:0px 3px 12px rgba(0,0,0,0.16);
     border-radius: 0 0 26px 26px;
@@ -1042,9 +1042,14 @@ table .m-input-number {margin:0 auto;}
 }
 .m-top.type01 .box-comment {
     display: flex; align-items: center; justify-content: space-between;
+    overflow: hidden;
+}
+.m-top.type01 .box-comment .right {
+    margin-top:-42px;
 }
 .m-top.type01 .box-comment .right img {
     height:180px;
+    position: relative; top:42px;
 }
 .m-top.type01 .box-comment .left .img {
     display: block;
