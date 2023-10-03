@@ -1391,9 +1391,11 @@ table .m-input-number {margin:0 auto;}
 
 
 .area-intro2 {
+    width: 100%; height:100%;
+    position:fixed; top:0; left:0; z-index:1;
     min-height: 100vh;
-    background-color:#000;
-    position:relative; overflow: hidden;
+    background-color:#fff;
+    overflow: hidden;
 }
 .area-intro2 .deco {
     position: absolute; bottom:-300px; left:10px;
@@ -1415,24 +1417,50 @@ table .m-input-number {margin:0 auto;}
     text-align:center;
     transition: opacity .3s, top .3s;
 }
+.area-intro2 .base {
+    width: 100%; height: 100%;
+    position:absolute; top:0; left:0; z-index:1;
+    background-color:rgba(255,255,255);
+    opacity:0;
+    transition: .6s;
+}
+.area-intro2 .base.active {
+    opacity:1;
+}
 .area-intro2 .console-container #text {
-    margin-right:-10px;
+
+}
+.area-intro2 .console-container #text span {
+    display: inline-block;
     font-size:60px; font-weight:bold; font-family: "scoreDream"; letter-spacing: 6px;
+    color:#0057ff;
+}
+.area-intro2 #console-container1 #text span:nth-child(3) {
+    transition: all .5s ease-in-out;
+}
+.area-intro2 #console-container1 #text span:nth-child(3).active {
+    font-weight:800;
+    transform:scale(6);
 }
 .area-intro2 .console-underscore {
     display:inline-block;
     position:relative;
     top:-0.14em; font-size:28px;
-    left:10px; color:#fff;
+    left:10px; color:#0057ff;
 }
 .area-intro2 #console-container2 {
     max-width:80%;
     margin:0 auto; margin-top:20px;
 }
 .area-intro2 #console-container2 #text {
+
+}
+.area-intro2 #console-container2 #text span{
+    display: inline-block;
+    min-width:10px;
     word-break: keep-all;
-    margin-right:-10px;
     font-size:20px; line-height:32px; font-weight:500; font-family: "scoreDream";
+    color:#0057ff;
 }
 
 .area-intro2 .box {
