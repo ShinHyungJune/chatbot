@@ -1288,6 +1288,7 @@ table .m-input-number {margin:0 auto;}
     background-color:#0057FF;
     position:relative; overflow: hidden;
 }
+
 .area-intro .hidden {
     opacity:0;
 }
@@ -1397,6 +1398,7 @@ table .m-input-number {margin:0 auto;}
     background-color:#fff;
     overflow: hidden;
 }
+
 .area-intro2 .deco {
     position: absolute; bottom:-300px; left:10px;
 }
