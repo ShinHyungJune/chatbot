@@ -354,7 +354,8 @@
                 target.innerHTML = "";
 
                 for(let i = 0; i < letterCount; i ++){
-                    letters += `<span>${words[0][i]}</span>`;
+                    console.log(words[0][i]);
+                    letters += `<span class='${words[0][i] === "A" || words[0][i] === "I" ? "point" : ""}'>${words[0][i]}</span>`;
                 }
 
                 target.innerHTML = letters;

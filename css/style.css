@@ -1435,6 +1435,9 @@ table .m-input-number {margin:0 auto;}
 .area-intro2 .console-container #text span {
     display: inline-block;
     font-size:60px; font-weight:bold; font-family: "scoreDream"; letter-spacing: 6px;
+    color:black;
+}
+.area-intro2 .console-container #text span.point {
     color:#0057ff;
 }
 .area-intro2 #console-container1 #text span:nth-child(3) {
